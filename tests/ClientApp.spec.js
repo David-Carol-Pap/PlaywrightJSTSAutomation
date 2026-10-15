@@ -52,14 +52,14 @@ test('Client App login', async ({page}) => {
       }
     }
 
-    expect(page.locator(".user__name [type='text']").first()).toHaveText(email)
+    await expect(page.locator(".user__name [type='text']").first()).toHaveText(email)
     await creditcard.fill("4542 9931 9292 2222");
     await expiryMonth.selectOption({label: "05"});
     await expiryDate.selectOption({label: "28"});
     await cvvCode.fill("123");
     await nameCard.fill("David Carol Pap");
     await page.locator(".action__submit").click();
-    expect(page.locator(".hero-primary")).toHaveText(" Thankyou for the order. ");
+    await expect(page.locator(".hero-primary")).toHaveText(" Thankyou for the order. ");
     const orderId = await page.locator(".em-spacer-1 .ng-star-inserted").textContent();
     console.log(orderId);
 
