@@ -88,7 +88,7 @@ test('Client App login', async () => {
     expect(orderId.includes(orderIdDetails)).toBeTruthy();
 })
 
-test('Test case 2', async ()=>
+test('@testapi Test case 2', async ()=>
 {
     const email = "";
     const productName = 'ZARA COAT 3';

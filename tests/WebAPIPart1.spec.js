@@ -1,5 +1,5 @@
 const {test, expect, request} = require('@playwright/test');
-const {APIUtils} = require('./utils/APIUtils');
+const {APIUtils} = require('../utils/APIUtils');
 const loginPayload = {userEmail: "papinho@gmail.com",userPassword: "Iamking@000"}
 const orderPayload={orders:[{country:"Cuba",productOrderedId:"6960eac0c941646b7a8b3e68"}]}
 let response;
@@ -15,7 +15,7 @@ test.beforeAll( async()=>
 })
 
 //create order is success
-test('Place the order', async ({page}) => {
+test('@testapi Place the order', async ({page}) => {
 
     // await page.goto("https://rahulshettyacademy.com/client");
     // await page.locator("#userEmail").fill("papinho@gmail.com");
