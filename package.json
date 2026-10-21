@@ -18,5 +18,8 @@
     "@types/node": "^26.6.5",
     "allure-playwright": "^3.13.0",
     "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^13.3.0"
   }
 }
